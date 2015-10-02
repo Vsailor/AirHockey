@@ -31,7 +31,20 @@ public class ButtonScript : Photon.MonoBehaviour
 
     public void JoinRoom(string name)
     {
-        PhotonNetwork.JoinRoom(name);      
+
+        try
+        {
+            PhotonNetwork.JoinRoom(name);
+        }
+        catch
+        {
+            if (PhotonNetwork.room != null)
+            {
+                PhotonNetwork.LeaveRoom();
+                LoadScene("JoinGameScene");
+            }
+        }
+        
     }
 
     public void SavePlayerName(GameObject inputField)
