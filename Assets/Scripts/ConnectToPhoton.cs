@@ -6,7 +6,7 @@ public class ConnectToPhoton : Photon.MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-        PhotonNetwork.autoJoinLobby = false;
+        PhotonNetwork.autoJoinLobby = true;
         if (!PhotonNetwork.connected)
 	    {
             PhotonNetwork.ConnectUsingSettings("0.1");

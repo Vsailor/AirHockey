@@ -24,14 +24,14 @@ public class ButtonScript : Photon.MonoBehaviour
         }
     }
 
-    public void CreateLobby(GameObject inputField)
+    public void CreateRoom(GameObject inputField)
     {
         PhotonNetwork.CreateRoom(inputField.GetComponent<InputField>().text, new RoomOptions(), TypedLobby.Default);
     }
 
-    public void JoinLobby()
+    public void JoinRoom(string name)
     {
-        PhotonNetwork.JoinRandomRoom();
+        PhotonNetwork.JoinRoom(name);      
     }
 
     public void SavePlayerName(GameObject inputField)
@@ -39,15 +39,4 @@ public class ButtonScript : Photon.MonoBehaviour
         PhotonNetwork.playerName = inputField.GetComponent<InputField>().text;
     }
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

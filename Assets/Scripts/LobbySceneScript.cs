@@ -44,8 +44,12 @@ public class LobbySceneScript : Photon.MonoBehaviour {
         }
         else
         {
-            player1.GetComponent<Text>().text = PhotonNetwork.otherPlayers[0].name;
-            player2.GetComponent<Text>().text = PhotonNetwork.playerName;
+            if (PhotonNetwork.otherPlayers.Length != 0)
+            {
+                player1.GetComponent<Text>().text = PhotonNetwork.otherPlayers[0].name;
+                player2.GetComponent<Text>().text = PhotonNetwork.playerName;
+            }
+
         }
     }
 
