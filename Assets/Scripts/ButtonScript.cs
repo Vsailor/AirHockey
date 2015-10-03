@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ButtonScript : Photon.MonoBehaviour
 {
+
     public void LoadScene(string sceneName)
     {
         Application.LoadLevel(sceneName);
@@ -53,11 +54,14 @@ public class ButtonScript : Photon.MonoBehaviour
         {
             toAdd = toAdd.Remove(59);
         }
-        t.text += toAdd;
-        if (toAdd.Last<char>() != '\n')
+
+        while (toAdd.Contains("\n"))
         {
-            t.text += '\n';
+            toAdd = toAdd.Remove(toAdd.IndexOf('\n'), 1);
         }
+        t.text += toAdd;
+        t.text += "\n";
+
         inputField.GetComponent<InputField>().text = "";
         PhotonView photonView = PhotonView.Find(1);
         photonView.RPC("Chat", PhotonTargets.All, t.text);
@@ -83,7 +87,7 @@ public class ButtonScript : Photon.MonoBehaviour
                 LoadScene("JoinGameScene");
             }
         }
-        
+
     }
 
     public void SavePlayerName(GameObject inputField)
