@@ -103,10 +103,11 @@ Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Mana
 Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.080 seconds
+- Completed reload, in  0.130 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+<<<<<<< HEAD
 <RI> Initialized touch support.
 Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.dll (this message is harmless)
@@ -149,3 +150,5 @@ Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 321.
 Total: 0.458851 ms (FindLiveObjects: 0.046184 ms CreateObjectMapping: 0.019671 ms MarkObjects: 0.382305 ms  DeleteObjects: 0.008980 ms)
 >>>>>>> origin/master
 
+=======
+>>>>>>> origin/master

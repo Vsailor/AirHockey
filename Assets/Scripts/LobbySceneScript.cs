@@ -12,7 +12,8 @@ public class LobbySceneScript : Photon.MonoBehaviour
         player1 = GameObject.Find("Player1");
         player2 = GameObject.Find("Player2");
     }
-
+    Button sendButton;
+    InputField inputField;
     private GameObject player1;
     private GameObject player2;
     private void Init()
@@ -22,7 +23,8 @@ public class LobbySceneScript : Photon.MonoBehaviour
             init = true;
             GameObject.Find("RoomName").GetComponent<Text>().text = "Room \"" + PhotonNetwork.room.name + "\"";
         }
-
+        inputField = GameObject.Find("InputField").GetComponent<InputField>();
+        sendButton = GameObject.Find("SendButton").GetComponent<Button>();
     }
 
 
@@ -65,6 +67,10 @@ public class LobbySceneScript : Photon.MonoBehaviour
         if (Time.fixedTime % 2 == 0)
         {
             ShowPlayers();
+        }
+        if (Input.GetKeyDown(KeyCode.Return) && inputField.text!="")
+        {
+            sendButton.GetComponent<ButtonScript>().SendMessageInLobby(GameObject.Find("InputField"));
         }
     }
 

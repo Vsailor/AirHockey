@@ -53,7 +53,6 @@ public class ButtonScript : Photon.MonoBehaviour
         {
             toAdd = toAdd.Remove(59);
         }
-        toAdd += "\n";
         t.text += toAdd;
         
         inputField.GetComponent<InputField>().text = "";
