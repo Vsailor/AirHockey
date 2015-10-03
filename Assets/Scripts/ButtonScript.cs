@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using System.Collections;
 using System.Linq;
@@ -22,6 +22,43 @@ public class ButtonScript : Photon.MonoBehaviour
         {
             PhotonNetwork.LeaveRoom();
         }
+    }
+    int getStringsCount(string s)
+    {
+        int count = 0;
+        for (int i = 0; i < s.Length; i++)
+        {
+            if (s[i] == '\n')
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+    [PunRPC]
+    void Chat(string NewMessage)
+    {
+        Text t = GameObject.Find("Chat").GetComponent<Text>();
+        t.text = NewMessage;
+    }
+    public void SendMessageInLobby(GameObject inputField)
+    {
+        Text t = GameObject.Find("Chat").GetComponent<Text>();
+        if (getStringsCount(t.text) >= 7)
+        {
+            t.text = t.text.Remove(0, t.text.IndexOf('\n') + 1);
+        }
+        string toAdd = PhotonNetwork.playerName + " [" + DateTime.Now.ToLongTimeString() + "]: " + inputField.GetComponent<InputField>().text;
+        if (toAdd.Length >= 59)
+        {
+            toAdd = toAdd.Remove(59);
+        }
+        toAdd += "\n";
+        t.text += toAdd;
+        
+        inputField.GetComponent<InputField>().text = "";
+        PhotonView photonView = PhotonView.Find(1);
+        photonView.RPC("Chat", PhotonTargets.All, t.text);
     }
 
     public void CreateRoom(GameObject inputField)

@@ -14,6 +14,7 @@ public class AutocompleteScript : MonoBehaviour {
         {
             GetComponent<InputField>().text = PhotonNetwork.playerName;
         }
+        init = true;
     }
 	// Update is called once per frame
 	void Update () {
