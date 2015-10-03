@@ -1,0 +1,86 @@
+Initialize engine version: 5.1.2f1 (afd2369b692a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon R7 200 Series (ID=0x665d)
+    Vendor:   ATI
+    VRAM:     1000 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.221 seconds
+desktop: 1280x1024 75Hz; virtual: 1280x1024 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Initialize engine version: 5.1.2f1 (afd2369b692a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon R7 200 Series (ID=0x665d)
+    Vendor:   ATI
+    VRAM:     1000 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.081 seconds
+desktop: 1280x1024 75Hz; virtual: 1280x1024 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 459c -> priority: 1 
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\2_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 37dc -> priority: 1 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.152350 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 336.
+Total: 0.512408 ms (FindLiveObjects: 0.051609 ms CreateObjectMapping: 0.035635 ms MarkObjects: 0.413285 ms  DeleteObjects: 0.010649 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.825584 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 321.
+Total: 0.452197 ms (FindLiveObjects: 0.045875 ms CreateObjectMapping: 0.029900 ms MarkObjects: 0.362085 ms  DeleteObjects: 0.012697 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.026025 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 336.
+Total: 0.585317 ms (FindLiveObjects: 0.106086 ms CreateObjectMapping: 0.049151 ms MarkObjects: 0.416972 ms  DeleteObjects: 0.010649 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.761686 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 321.
+Total: 0.426802 ms (FindLiveObjects: 0.044646 ms CreateObjectMapping: 0.023347 ms MarkObjects: 0.344473 ms  DeleteObjects: 0.013107 ms)
+
