@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class JoinGameScript : Photon.MonoBehaviour
 {
+    public int Interval;
     public GameObject Room;
     public GameObject JoinButton;
     // Use this for initialization
@@ -50,13 +51,13 @@ public class JoinGameScript : Photon.MonoBehaviour
                 GameObject room = Instantiate(Room);
                 room.transform.parent = GameObject.Find("Canvas").transform;
                 room.GetComponent<RectTransform>().anchoredPosition = Room.GetComponent<RectTransform>().anchoredPosition;
-                room.transform.position = new Vector3(room.transform.position.x, room.transform.position.y - i * 50f, room.transform.position.z);
+                room.transform.position = new Vector3(room.transform.position.x, room.transform.position.y - i * Interval, room.transform.position.z);
                 room.GetComponent<Text>().text = rooms[i].name;
                 GameObject button = Instantiate(JoinButton);
                 button.transform.parent = GameObject.Find("Canvas").transform;
                 var buttonComponent = JoinButton.GetComponent<ButtonScript>();
                 button.GetComponent<RectTransform>().anchoredPosition = JoinButton.GetComponent<RectTransform>().anchoredPosition;
-                button.transform.position = new Vector3(button.transform.position.x, button.transform.position.y - i * 50f, button.transform.position.z);
+                button.transform.position = new Vector3(button.transform.position.x, button.transform.position.y - i *Interval, button.transform.position.z);
                 button.GetComponent<JoinButtonScript>().LoadLevelName = rooms[i].name;
                 list.AddRange(new[] { room, button });
             }
@@ -71,6 +72,9 @@ public class JoinGameScript : Photon.MonoBehaviour
         if (!inited)
         {
             init();
+        }
+        if (Time.fixedTime % 5 == 0)
+        {
             RefreshList();
         }
     }
