@@ -54,7 +54,10 @@ public class ButtonScript : Photon.MonoBehaviour
             toAdd = toAdd.Remove(59);
         }
         t.text += toAdd;
-        
+        if (toAdd.Last<char>() != '\n')
+        {
+            t.text += '\n';
+        }
         inputField.GetComponent<InputField>().text = "";
         PhotonView photonView = PhotonView.Find(1);
         photonView.RPC("Chat", PhotonTargets.All, t.text);
