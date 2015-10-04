@@ -21,7 +21,8 @@ public class LobbySceneScript : Photon.MonoBehaviour
         if (PhotonNetwork.room != null)
         {
             init = true;
-            GameObject.Find("RoomName").GetComponent<Text>().text = "Room \"" + PhotonNetwork.room.name + "\"";
+            GameObject.Find("RoomName").GetComponent<UILabel>().text = "Room \"" + PhotonNetwork.room.name + "\"";
+            
         }
         inputField = GameObject.Find("InputField").GetComponent<InputField>();
         sendButton = GameObject.Find("SendButton").GetComponent<Button>();

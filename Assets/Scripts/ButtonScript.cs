@@ -4,9 +4,34 @@ using System.Collections;
 using System.Linq;
 using UnityEngine.UI;
 
-public class ButtonScript : Photon.MonoBehaviour
+public class ButtonScript : MonoBehaviour
 {
-
+    void OnClick()
+    {
+        if (name == "CreateGameButton")
+        {
+            Application.LoadLevel("CreateGameMenuScene");
+        }
+        else if (name == "JoinGameButton")
+        {
+            Application.LoadLevel("EnterNameScene");
+        }
+        else if (name == "QuitGameButton")
+        {
+            Application.Quit();
+        }
+        else if (name == "BackToMainMenuButton")
+        {
+            Application.LoadLevel("MainMenuScene");
+        }
+        else if (name == "CreateRoomButton")
+        {
+            ConnectToPhoton camera = GameObject.Find("Camera").GetComponent<ConnectToPhoton>();
+            camera.CreateRoom((GameObject.Find("RoomNameField").transform.FindChild("Label").GetComponent<UILabel>().text));
+            camera.SavePlayerName(GameObject.Find("YourNameField").transform.FindChild("Label").GetComponent<UILabel>().text);
+            Application.LoadLevel("LobbyScene");
+        }
+    }
     public void LoadScene(string sceneName)
     {
         Application.LoadLevel(sceneName);
@@ -67,10 +92,7 @@ public class ButtonScript : Photon.MonoBehaviour
         photonView.RPC("Chat", PhotonTargets.All, t.text);
     }
 
-    public void CreateRoom(GameObject inputField)
-    {
-        PhotonNetwork.CreateRoom(inputField.GetComponent<InputField>().text, new RoomOptions(), TypedLobby.Default);
-    }
+
 
     public void JoinRoom(string name)
     {
@@ -90,9 +112,5 @@ public class ButtonScript : Photon.MonoBehaviour
 
     }
 
-    public void SavePlayerName(GameObject inputField)
-    {
-        PhotonNetwork.playerName = inputField.GetComponent<InputField>().text;
-    }
 
 }
