@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: 5783af781a50e85478ae3fd2ff305853
+timeCreated: 1443983403
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: 1leftsubleg
+    100002: 1rightsubleg
+    100004: 2leftsubleg
+    100006: 2rightsubleg
+    100008: Ball
+    100010: BottomContainer
+    100012: BottomEdges
+    100014: //RootNode
+    100016: Leftleg
+    100018: rightLeg
+    100020: Stick
+    100022: Surface
+    100024: Table
+    100026: TableBorders
+    100028: TableBorders 1
+    100030: TopEdge
+    400000: 1leftsubleg
+    400002: 1rightsubleg
+    400004: 2leftsubleg
+    400006: 2rightsubleg
+    400008: Ball
+    400010: BottomContainer
+    400012: BottomEdges
+    400014: //RootNode
+    400016: Leftleg
+    400018: rightLeg
+    400020: Stick
+    400022: Surface
+    400024: Table
+    400026: TableBorders
+    400028: TableBorders 1
+    400030: TopEdge
+    2300000: 1leftsubleg
+    2300002: 1rightsubleg
+    2300004: 2leftsubleg
+    2300006: 2rightsubleg
+    2300008: Ball
+    2300010: BottomContainer
+    2300012: BottomEdges
+    2300014: Leftleg
+    2300016: rightLeg
+    2300018: Stick
+    2300020: Surface
+    2300022: TableBorders 1
+    2300024: TopEdge
+    3300000: 1leftsubleg
+    3300002: 1rightsubleg
+    3300004: 2leftsubleg
+    3300006: 2rightsubleg
+    3300008: Ball
+    3300010: BottomContainer
+    3300012: BottomEdges
+    3300014: Leftleg
+    3300016: rightLeg
+    3300018: Stick
+    3300020: Surface
+    3300022: TableBorders 1
+    3300024: TopEdge
+    4300000: Stick
+    4300002: Ball
+    4300004: Surface
+    4300006: BottomEdges
+    4300008: TopEdge
+    4300010: BottomContainer
+    4300012: rightLeg
+    4300014: 2rightsubleg
+    4300016: 1rightsubleg
+    4300018: 2leftsubleg
+    4300020: 1leftsubleg
+    4300022: Leftleg
+    4300024: TableBorders
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

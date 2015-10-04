@@ -2,7 +2,6 @@ Initialize engine version: 5.1.2f1 (afd2369b692a)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-<<<<<<< HEAD
     Renderer: AMD Radeon R7 200 Series (ID=0x665d)
     Vendor:   ATI
     VRAM:     1000 MB
@@ -21,7 +20,7 @@ Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Mana
 Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.084 seconds
+- Completed reload, in  0.079 seconds
 desktop: 1280x1024 75Hz; virtual: 1280x1024 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -29,126 +28,32 @@ desktop: 1280x1024 75Hz; virtual: 1280x1024 at 0,0
 Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 17f0 -> priority: 1 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.139482 ms
+  Thread -> id: 2bf0 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.511398 ms
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 337.
-Total: 0.477183 ms (FindLiveObjects: 0.039321 ms CreateObjectMapping: 0.027033 ms MarkObjects: 0.396901 ms  DeleteObjects: 0.012287 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.925116 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 322.
-Total: 0.442776 ms (FindLiveObjects: 0.039731 ms CreateObjectMapping: 0.029081 ms MarkObjects: 0.360447 ms  DeleteObjects: 0.012697 ms)
-
-Initialize engine version: 5.1.2f1 (afd2369b692a)
-GfxDevice: creating device client; threaded=1
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: AMD Radeon R7 200 Series (ID=0x665d)
-    Vendor:   ATI
-    VRAM:     1000 MB
-Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.081 seconds
-desktop: 1280x1024 75Hz; virtual: 1280x1024 at 0,0
-<RI> Initializing input.
-<RI> Input initialized.
-<RI> Initialized touch support.
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.dll (this message is harmless)
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 3148 -> priority: 1 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.181671 ms
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 337.
-Total: 0.519781 ms (FindLiveObjects: 0.043417 ms CreateObjectMapping: 0.032358 ms MarkObjects: 0.430488 ms  DeleteObjects: 0.012287 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 331.
+Total: 0.463666 ms (FindLiveObjects: 0.044646 ms CreateObjectMapping: 0.033996 ms MarkObjects: 0.372325 ms  DeleteObjects: 0.010649 ms)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.994338 ms
+UnloadTime: 1.665430 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 322.
-Total: 0.478821 ms (FindLiveObjects: 0.058982 ms CreateObjectMapping: 0.029491 ms MarkObjects: 0.377240 ms  DeleteObjects: 0.012287 ms)
-=======
-    Renderer: NVIDIA GeForce 710M      (ID=0x1140)
-    Vendor:   NVIDIA
-    VRAM:     1996 MB
-Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll (this message is harmless)
-Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.130 seconds
-desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
-<RI> Initializing input.
-<RI> Input initialized.
-<<<<<<< HEAD
-<RI> Initialized touch support.
-Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.dll (this message is harmless)
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1b8c -> priority: 1 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.964835 ms
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 338.
-Total: 0.670958 ms (FindLiveObjects: 0.103059 ms CreateObjectMapping: 0.062006 ms MarkObjects: 0.488786 ms  DeleteObjects: 0.014967 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 347.
+Total: 0.459979 ms (FindLiveObjects: 0.041779 ms CreateObjectMapping: 0.029491 ms MarkObjects: 0.374783 ms  DeleteObjects: 0.013107 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.550174 ms
+UnloadTime: 0.618085 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 357.
-Total: 0.438752 ms (FindLiveObjects: 0.044046 ms CreateObjectMapping: 0.018815 ms MarkObjects: 0.363916 ms  DeleteObjects: 0.010263 ms)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.341489 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 321.
-Total: 0.546944 ms (FindLiveObjects: 0.046184 ms CreateObjectMapping: 0.035493 ms MarkObjects: 0.449443 ms  DeleteObjects: 0.014111 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.518720 ms
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 330.
-Total: 1.100730 ms (FindLiveObjects: 0.082533 ms CreateObjectMapping: 0.042335 ms MarkObjects: 0.963032 ms  DeleteObjects: 0.010263 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.650431 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 346.
-Total: 0.424213 ms (FindLiveObjects: 0.041908 ms CreateObjectMapping: 0.020098 ms MarkObjects: 0.349377 ms  DeleteObjects: 0.011973 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 358.
+Total: 0.456703 ms (FindLiveObjects: 0.043007 ms CreateObjectMapping: 0.024575 ms MarkObjects: 0.377240 ms  DeleteObjects: 0.010649 ms)
 
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.563194 ms
+UnloadTime: 1.438102 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 321.
-Total: 0.458851 ms (FindLiveObjects: 0.046184 ms CreateObjectMapping: 0.019671 ms MarkObjects: 0.382305 ms  DeleteObjects: 0.008980 ms)
->>>>>>> origin/master
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 344.
+Total: 0.496843 ms (FindLiveObjects: 0.046694 ms CreateObjectMapping: 0.029900 ms MarkObjects: 0.405912 ms  DeleteObjects: 0.013107 ms)
 
-=======
->>>>>>> origin/master
+ConnectUsingSettings() failed. Can only connect while in state 'Disconnected'. Current state: Connected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
