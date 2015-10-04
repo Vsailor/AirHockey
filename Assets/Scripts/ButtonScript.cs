@@ -31,6 +31,36 @@ public class ButtonScript : MonoBehaviour
             camera.SavePlayerName(GameObject.Find("YourNameField").transform.FindChild("Label").GetComponent<UILabel>().text);
             Application.LoadLevel("LobbyScene");
         }
+        else if (name == "SendButton")
+        {
+            GameObject.Find("Camera").GetComponent<ConnectToPhoton>().SendMessageInLobby();
+
+        }
+        else if (name == "ReadyPlayButton")
+        {
+            if (GameObject.Find("Camera").GetComponent<ConnectToPhoton>().GetMyPlayerName() == GameObject.Find("Player1").GetComponent<UILabel>().text)
+            {
+                if (GameObject.Find("Ready1").GetComponent<UISprite>().spriteName == "Green")
+                {
+                    GameObject.Find("Ready1").GetComponent<UISprite>().spriteName = "Red";
+                }
+                else
+                {
+                    GameObject.Find("Ready1").GetComponent<UISprite>().spriteName = "Green";
+                }
+            }
+            else
+            {
+                if (GameObject.Find("Ready2").GetComponent<UISprite>().spriteName == "Green")
+                {
+                    GameObject.Find("Ready2").GetComponent<UISprite>().spriteName = "Red";
+                }
+                else
+                {
+                    GameObject.Find("Ready2").GetComponent<UISprite>().spriteName = "Green";
+                }
+            }
+        }
     }
     public void LoadScene(string sceneName)
     {
@@ -49,48 +79,7 @@ public class ButtonScript : MonoBehaviour
             PhotonNetwork.LeaveRoom();
         }
     }
-    int getStringsCount(string s)
-    {
-        int count = 0;
-        for (int i = 0; i < s.Length; i++)
-        {
-            if (s[i] == '\n')
-            {
-                count++;
-            }
-        }
-        return count;
-    }
-    [PunRPC]
-    void Chat(string NewMessage)
-    {
-        Text t = GameObject.Find("Chat").GetComponent<Text>();
-        t.text = NewMessage;
-    }
-    public void SendMessageInLobby(GameObject inputField)
-    {
-        Text t = GameObject.Find("Chat").GetComponent<Text>();
-        if (getStringsCount(t.text) >= 7)
-        {
-            t.text = t.text.Remove(0, t.text.IndexOf('\n') + 1);
-        }
-        string toAdd = PhotonNetwork.playerName + " [" + DateTime.Now.ToLongTimeString() + "]: " + inputField.GetComponent<InputField>().text;
-        if (toAdd.Length >= 59)
-        {
-            toAdd = toAdd.Remove(59);
-        }
 
-        while (toAdd.Contains("\n"))
-        {
-            toAdd = toAdd.Remove(toAdd.IndexOf('\n'), 1);
-        }
-        t.text += toAdd;
-        t.text += "\n";
-
-        inputField.GetComponent<InputField>().text = "";
-        PhotonView photonView = PhotonView.Find(1);
-        photonView.RPC("Chat", PhotonTargets.All, t.text);
-    }
 
 
 

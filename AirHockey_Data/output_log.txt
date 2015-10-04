@@ -2,58 +2,201 @@ Initialize engine version: 5.1.2f1 (afd2369b692a)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: AMD Radeon R7 200 Series (ID=0x665d)
-    Vendor:   ATI
-    VRAM:     1000 MB
+    Renderer: NVIDIA GeForce 710M      (ID=0x1140)
+    Vendor:   NVIDIA
+    VRAM:     1996 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll (this message is harmless)
-Loading C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.079 seconds
-desktop: 1280x1024 75Hz; virtual: 1280x1024 at 0,0
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.106 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Initialize engine version: 5.1.2f1 (afd2369b692a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 710M      (ID=0x1140)
+    Vendor:   NVIDIA
+    VRAM:     1996 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.096 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\datra\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.dll (this message is harmless)
+<RI> Initialized touch support.
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2bf0 -> priority: 1 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.511398 ms
+  Thread -> id: 2100 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.058245 ms
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 331.
-Total: 0.463666 ms (FindLiveObjects: 0.044646 ms CreateObjectMapping: 0.033996 ms MarkObjects: 0.372325 ms  DeleteObjects: 0.010649 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.731681 ms (FindLiveObjects: 0.049605 ms CreateObjectMapping: 0.032927 ms MarkObjects: 0.635036 ms  DeleteObjects: 0.013256 ms)
 
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.665430 ms
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 350 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.821057 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 347.
-Total: 0.459979 ms (FindLiveObjects: 0.041779 ms CreateObjectMapping: 0.029491 ms MarkObjects: 0.374783 ms  DeleteObjects: 0.013107 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 510.
+Total: 0.566187 ms (FindLiveObjects: 0.048750 ms CreateObjectMapping: 0.035493 ms MarkObjects: 0.466548 ms  DeleteObjects: 0.014111 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.538434 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 474.
+Total: 0.498621 ms (FindLiveObjects: 0.042335 ms CreateObjectMapping: 0.022236 ms MarkObjects: 0.421219 ms  DeleteObjects: 0.010690 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.871369 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 460.
+Total: 0.553785 ms (FindLiveObjects: 0.042335 ms CreateObjectMapping: 0.025658 ms MarkObjects: 0.455002 ms  DeleteObjects: 0.029506 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.618085 ms
+UnloadTime: 0.550792 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 358.
-Total: 0.456703 ms (FindLiveObjects: 0.043007 ms CreateObjectMapping: 0.024575 ms MarkObjects: 0.377240 ms  DeleteObjects: 0.010649 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 502.
+Total: 0.590562 ms (FindLiveObjects: 0.045329 ms CreateObjectMapping: 0.022664 ms MarkObjects: 0.510594 ms  DeleteObjects: 0.010690 ms)
 
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.438102 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 344.
-Total: 0.496843 ms (FindLiveObjects: 0.046694 ms CreateObjectMapping: 0.029900 ms MarkObjects: 0.405912 ms  DeleteObjects: 0.013107 ms)
-
-ConnectUsingSettings() failed. Can only connect while in state 'Disconnected'. Current state: Connected
+The observed monobehaviour (Camera) of this PhotonView does not implement OnPhotonSerializeView()!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+The observed monobehaviour (Camera) of this PhotonView does not implement OnPhotonSerializeView()!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LobbySceneScript.ShowPlayers () [0x00000] in <filename unknown>:0 
+  at LobbySceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
