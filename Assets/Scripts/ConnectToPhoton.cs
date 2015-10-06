@@ -5,10 +5,20 @@ using System;
 
 public class ConnectToPhoton : Photon.MonoBehaviour
 {
+    const int MAX_CHAT_STRINGS_COUNT = 6;
+    const int MAX_CHAT_STRING_LENGTH = 40;
+    public UILabel ChatText;
+    GameObject inputField;
+    int maxChatInputString;
     // Use this for initialization
     void Start()
     {
-        
+        if (Application.loadedLevelName == "LobbyScene")
+        {
+            ChatText = GameObject.Find("Chat").GetComponent<UILabel>();
+            inputField = GameObject.Find("InputField");
+            maxChatInputString = MAX_CHAT_STRING_LENGTH - (PlayerName + ": ").Length;
+        }
     }
     public void Debug()
     {
@@ -21,29 +31,35 @@ public class ConnectToPhoton : Photon.MonoBehaviour
         PhotonNetwork.playerName = "Default";
 
     }
-    public void SavePlayerName(string inputField)
+    public string PlayerName
     {
-        PhotonNetwork.playerName = inputField;
-    }
-    public string GetMyPlayerName()
-    {
-        return PhotonNetwork.playerName;
-    }
-    public string GetOponentName()
-    {
-        if (PhotonNetwork.countOfPlayers == 2)
+        get
         {
-            if (PhotonNetwork.playerList[0].name == PhotonNetwork.playerName)
-            {
-                return PhotonNetwork.playerList[1].name;
-            }
-            return PhotonNetwork.playerList[0].name;
+            return PhotonNetwork.playerName;
         }
-        return "";
+        set
+        {
+            PhotonNetwork.playerName = value;
+        }
+    }
+    public string OponentName
+    {
+        get
+        {
+            if (PhotonNetwork.countOfPlayers == 2)
+            {
+                if (PhotonNetwork.playerList[0].name == PhotonNetwork.playerName)
+                {
+                    return PhotonNetwork.playerList[1].name;
+                }
+                return PhotonNetwork.playerList[0].name;
+            }
+            return "";
+        }
     }
 
 
-    int getStringsCount(string s)
+    private int getStringsCount(string s)
     {
         int count = 0;
         for (int i = 0; i < s.Length; i++)
@@ -60,12 +76,15 @@ public class ConnectToPhoton : Photon.MonoBehaviour
     [PunRPC]
     void Chat(string NewMessage)
     {
-        UILabel t = GameObject.Find("Chat").GetComponent<UILabel>();
-        t.text = NewMessage;
+        ChatText.text = NewMessage;
     }
+    UISprite Ready1;
+    UISprite Ready2;
     [PunRPC]
     void ReadyLight(string playerName)
     {
+        Ready1 = GameObject.Find("Ready1").GetComponent<UISprite>();
+        Ready2 = GameObject.Find("Ready2").GetComponent<UISprite>();
         if (PhotonNetwork.isMasterClient)
         {
             Player1 = !Player1;
@@ -76,52 +95,59 @@ public class ConnectToPhoton : Photon.MonoBehaviour
         }
         if (Player1)
         {
-            GameObject.Find("Ready1").GetComponent<UISprite>().spriteName = "Green";         
+            Ready1.spriteName = "Green";         
         }
-        if (!Player1)
+        else if (!Player1)
         {
-            GameObject.Find("Ready1").GetComponent<UISprite>().spriteName = "Red";
+            Ready1.spriteName = "Red";
         }
+
         if (Player2)
         {
-            GameObject.Find("Ready2").GetComponent<UISprite>().spriteName = "Green";
+            Ready2.spriteName = "Green";
         }
-        if (!Player2)
+        else if (!Player2)
         {
-            GameObject.Find("Ready2").GetComponent<UISprite>().spriteName = "Red";
+            Ready2.spriteName = "Red";
         }
 
     }
+
     public void ReadyClick(string name)
     {
         PhotonView photonView = PhotonView.Find(2);
         photonView.RPC("ReadyLight", PhotonTargets.All, name);
     }
+
     public void SendMessageInLobby()
     {
-        GameObject inputField = GameObject.Find("InputField");
-        UILabel t = GameObject.Find("Chat").GetComponent<UILabel>();
-        if (getStringsCount(t.text) >= 6)
+
+        if (getStringsCount(ChatText.text) >= maxChatInputString)
         {
-            t.text = t.text.Remove(0, t.text.IndexOf('\n') + 1);
+            ChatText.text = ChatText.text.Remove(0, ChatText.text.IndexOf('\n') + 1);
         }
         string toAdd = PhotonNetwork.playerName+ ": " + inputField.transform.FindChild("Label").GetComponent<UILabel>().text;
-        if (toAdd.Length >= 26)
+        if (toAdd.Length >= maxChatInputString)
         {
-            toAdd = toAdd.Remove(26);
+            toAdd = toAdd.Remove(maxChatInputString);
         }
 
         while (toAdd.Contains("\n"))
         {
             toAdd = toAdd.Remove(toAdd.IndexOf('\n'), 1);
         }
-        t.text += toAdd;
-        t.text += "\n";
+        ChatText.text += toAdd;
+        ChatText.text += "\n";
 
         inputField.transform.FindChild("Label").GetComponent<UILabel>().text = "";
         PhotonView photonView = PhotonView.Find(1);
-        photonView.RPC("Chat", PhotonTargets.All, t.text);
+        photonView.RPC("Chat", PhotonTargets.All, ChatText.text);
 
+    }
+
+    public void ExitRoom()
+    {
+        PhotonNetwork.LeaveRoom();
     }
 
     public void CreateRoom(string roomName)

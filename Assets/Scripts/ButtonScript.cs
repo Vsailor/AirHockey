@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour
 {
+    private ConnectToPhoton PhotonCamera;
     void OnClick()
     {
         if (name == "CreateGameButton")
@@ -22,13 +23,13 @@ public class ButtonScript : MonoBehaviour
         }
         else if (name == "BackToMainMenuButton")
         {
+            PhotonCamera.ExitRoom();
             Application.LoadLevel("MainMenuScene");
         }
         else if (name == "CreateRoomButton")
         {
-            ConnectToPhoton camera = GameObject.Find("Camera").GetComponent<ConnectToPhoton>();
-            camera.CreateRoom((GameObject.Find("RoomNameField").transform.FindChild("Label").GetComponent<UILabel>().text));
-            camera.SavePlayerName(GameObject.Find("YourNameField").transform.FindChild("Label").GetComponent<UILabel>().text);
+            PhotonCamera.CreateRoom((GameObject.Find("RoomNameField").transform.FindChild("Label").GetComponent<UILabel>().text));
+            PhotonCamera.PlayerName = GameObject.Find("YourNameField").transform.FindChild("Label").GetComponent<UILabel>().text;
             Application.LoadLevel("LobbyScene");
         }
         else if (name == "SendButton")
@@ -38,28 +39,16 @@ public class ButtonScript : MonoBehaviour
         }
         else if (name == "ReadyPlayButton")
         {
-            if (GameObject.Find("Camera").GetComponent<ConnectToPhoton>().GetMyPlayerName() == GameObject.Find("Player1").GetComponent<UILabel>().text)
-            {
-                if (GameObject.Find("Ready1").GetComponent<UISprite>().spriteName == "Green")
-                {
-                    GameObject.Find("Ready1").GetComponent<UISprite>().spriteName = "Red";
-                }
-                else
-                {
-                    GameObject.Find("Ready1").GetComponent<UISprite>().spriteName = "Green";
-                }
-            }
-            else
-            {
-                if (GameObject.Find("Ready2").GetComponent<UISprite>().spriteName == "Green")
-                {
-                    GameObject.Find("Ready2").GetComponent<UISprite>().spriteName = "Red";
-                }
-                else
-                {
-                    GameObject.Find("Ready2").GetComponent<UISprite>().spriteName = "Green";
-                }
-            }
+            PhotonCamera.ReadyClick(PhotonCamera.PlayerName);
+        }
+        else if (name == "ConfirmNameButton")
+        {
+            PhotonCamera.PlayerName = GameObject.Find("InputField").transform.FindChild("Label").GetComponent<UILabel>().text;
+            Application.LoadLevel("JoinGameScene");
+        }
+        else if (name == "BackToNameScene")
+        {
+            Application.LoadLevel("EnterNameScene");
         }
     }
     public void LoadScene(string sceneName)
@@ -80,7 +69,10 @@ public class ButtonScript : MonoBehaviour
         }
     }
 
-
+    void Start()
+    {
+        PhotonCamera = GameObject.Find("Camera").GetComponent<ConnectToPhoton>();
+    }
 
 
     public void JoinRoom(string name)
