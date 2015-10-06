@@ -8,6 +8,17 @@ public class BallScript : MonoBehaviour {
     {
         audio = GetComponents<AudioSource>();
     }
+
+    void Update()
+    {
+        if (transform.localPosition.x > 43 || transform.localPosition.x < -34)
+        {
+            audio[2].Play();
+            GetComponent<Rigidbody>().MovePosition(new Vector3(0,2.28f,0));
+            GetComponent<Rigidbody>().Sleep();
+            GetComponent<Rigidbody>().WakeUp();
+        }
+    }
     void OnCollisionEnter(Collision collision)
     {
         foreach (ContactPoint contact in collision.contacts)
@@ -19,7 +30,7 @@ public class BallScript : MonoBehaviour {
         {
             audio[0].Play();
         }
-        if (collision.gameObject.name == "Stick")
+        if (collision.gameObject.name == "Stick"|| collision.gameObject.name == "Stick2")
         {
             audio[1].Play();
         }
