@@ -81,18 +81,12 @@ public class ConnectToPhoton : Photon.MonoBehaviour
     UISprite Ready1;
     UISprite Ready2;
     [PunRPC]
-    void ReadyLight(string playerName)
+    void ReadyLight(bool player1, bool player2)
     {
         Ready1 = GameObject.Find("Ready1").GetComponent<UISprite>();
         Ready2 = GameObject.Find("Ready2").GetComponent<UISprite>();
-        if (PhotonNetwork.isMasterClient)
-        {
-            Player1 = !Player1;
-        }
-        else
-        {
-            Player2 = !Player2;
-        }
+        Player1 = player1;
+        Player2 = player2;
         if (Player1)
         {
             Ready1.spriteName = "Green";         
@@ -113,16 +107,29 @@ public class ConnectToPhoton : Photon.MonoBehaviour
 
     }
 
-    public void ReadyClick(string name)
+    public void ReadyClick(bool player1, bool player2)
     {
         PhotonView photonView = PhotonView.Find(2);
-        photonView.RPC("ReadyLight", PhotonTargets.All, name);
+        photonView.RPC("ReadyLight", PhotonTargets.All, player1, player2);
     }
-
+    public bool PlayerIsMasterClient
+    {
+        get
+        {
+            return PhotonNetwork.isMasterClient;
+        }
+    }
     public void SendMessageInLobby()
     {
-
-        if (getStringsCount(ChatText.text) >= maxChatInputString)
+        if (ChatText.text.Contains("|"))
+        {
+            return;
+        }
+        if (ChatText.text != "")
+        {
+            ChatText.text += '\n';
+        }
+        if (getStringsCount(ChatText.text) >= MAX_CHAT_STRINGS_COUNT)
         {
             ChatText.text = ChatText.text.Remove(0, ChatText.text.IndexOf('\n') + 1);
         }
@@ -137,7 +144,6 @@ public class ConnectToPhoton : Photon.MonoBehaviour
             toAdd = toAdd.Remove(toAdd.IndexOf('\n'), 1);
         }
         ChatText.text += toAdd;
-        ChatText.text += "\n";
 
         inputField.transform.FindChild("Label").GetComponent<UILabel>().text = "";
         PhotonView photonView = PhotonView.Find(1);

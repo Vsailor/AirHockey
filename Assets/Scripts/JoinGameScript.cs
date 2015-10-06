@@ -28,7 +28,7 @@ public class JoinGameScript : Photon.MonoBehaviour
     public void RefreshList()
     {
         var rooms = PhotonNetwork.GetRoomList();
-        JoinButton.GetComponent<Button>().onClick.RemoveAllListeners();
+        //JoinButton.GetComponent<Button>().onClick.RemoveAllListeners();
         for (int i = 0; i < list.Count; i++)
         {
 
@@ -41,7 +41,7 @@ public class JoinGameScript : Photon.MonoBehaviour
             if (i == 0)
             {
                 Room.SetActive(true);
-                Room.GetComponent<Text>().text = rooms[0].name;
+                Room.GetComponent<UILabel>().text = rooms[0].name;
                 JoinButton.SetActive(true);
                 JoinButton.GetComponent<JoinButtonScript>().LoadLevelName = rooms[0].name;
             }
@@ -49,15 +49,16 @@ public class JoinGameScript : Photon.MonoBehaviour
             {
 
                 GameObject room = Instantiate(Room);
-                room.transform.parent = GameObject.Find("Canvas").transform;
-                room.GetComponent<RectTransform>().anchoredPosition = Room.GetComponent<RectTransform>().anchoredPosition;
+                room.transform.parent = GameObject.Find("Panel").transform;
+                room.transform.position = Room.transform.position;
                 room.transform.position = new Vector3(room.transform.position.x, room.transform.position.y - i * Interval, room.transform.position.z);
-                room.GetComponent<Text>().text = rooms[i].name;
+                room.GetComponent<UILabel>().text = rooms[i].name;
                 GameObject button = Instantiate(JoinButton);
-                button.transform.parent = GameObject.Find("Canvas").transform;
+                button.transform.parent = GameObject.Find("Panel").transform;
+                button.transform.position = JoinButton.transform.position;
+                button.transform.localScale = JoinButton.transform.localScale;
                 var buttonComponent = JoinButton.GetComponent<ButtonScript>();
-                button.GetComponent<RectTransform>().anchoredPosition = JoinButton.GetComponent<RectTransform>().anchoredPosition;
-                button.transform.position = new Vector3(button.transform.position.x, button.transform.position.y - i *Interval, button.transform.position.z);
+                button.transform.position = new Vector3(button.transform.position.x, button.transform.position.y - i * Interval, button.transform.position.z);
                 button.GetComponent<JoinButtonScript>().LoadLevelName = rooms[i].name;
                 list.AddRange(new[] { room, button });
             }
@@ -73,9 +74,10 @@ public class JoinGameScript : Photon.MonoBehaviour
         {
             init();
         }
-        if (Time.fixedTime % 5 == 0)
+        if (Time.fixedTime % 10 == 0)
         {
             RefreshList();
         }
+
     }
 }

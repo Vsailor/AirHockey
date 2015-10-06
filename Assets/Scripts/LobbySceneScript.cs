@@ -43,11 +43,18 @@ public class LobbySceneScript : Photon.MonoBehaviour
                 player2.GetComponent<UILabel>().text = PhotonNetwork.otherPlayers[0].name;
                 GameObject.Find("Ready2").GetComponent<UISprite>().enabled = true;
                 PhotonView photonView = PhotonView.Find(1);
-                Text t = GameObject.Find("Chat").GetComponent<Text>();
+                UILabel t = GameObject.Find("Chat").GetComponent<UILabel>();
                 photonView.RPC("Chat", PhotonTargets.All, t.text);
+                photonView = PhotonView.Find(2);
+                bool p1 = GameObject.Find("Camera").GetComponent<ConnectToPhoton>().Player1;
+                bool p2 = GameObject.Find("Camera").GetComponent<ConnectToPhoton>().Player2;
+                photonView.RPC("ReadyLight", PhotonTargets.All, p1, p2);
             }
             else
             {
+                PhotonView photonView = PhotonView.Find(2);
+                bool p1 = GameObject.Find("Camera").GetComponent<ConnectToPhoton>().Player1;
+                photonView.RPC("ReadyLight", PhotonTargets.All, p1, false);
                 player2.GetComponent<UILabel>().text = "";
                 GameObject.Find("Ready2").GetComponent<UISprite>().enabled = false;
             }
@@ -75,7 +82,7 @@ public class LobbySceneScript : Photon.MonoBehaviour
         {
             ShowPlayers();
         }
-        if (Input.GetKeyDown(KeyCode.Return) && inputField.text != "")
+        if (Input.GetKeyDown(KeyCode.Return) && inputField.text != "" && !inputField.text.Contains("|"))
         {
             GameObject.Find("Camera").GetComponent<ConnectToPhoton>().SendMessageInLobby();
         }

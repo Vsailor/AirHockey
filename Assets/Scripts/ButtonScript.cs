@@ -39,7 +39,14 @@ public class ButtonScript : MonoBehaviour
         }
         else if (name == "ReadyPlayButton")
         {
-            PhotonCamera.ReadyClick(PhotonCamera.PlayerName);
+            if (PhotonCamera.PlayerIsMasterClient)
+            {
+                PhotonCamera.ReadyClick(!PhotonCamera.Player1, PhotonCamera.Player2);
+            }
+            else
+            {
+                PhotonCamera.ReadyClick(PhotonCamera.Player1, !PhotonCamera.Player2);
+            }
         }
         else if (name == "ConfirmNameButton")
         {
@@ -49,6 +56,12 @@ public class ButtonScript : MonoBehaviour
         else if (name == "BackToNameScene")
         {
             Application.LoadLevel("EnterNameScene");
+        }
+        else if (name.Contains("JoinButton"))
+        {
+            var comp = GetComponent<JoinButtonScript>();
+            JoinRoom(comp.LoadLevelName);
+            Application.LoadLevel("LobbyScene");
         }
     }
     public void LoadScene(string sceneName)
@@ -73,7 +86,20 @@ public class ButtonScript : MonoBehaviour
     {
         PhotonCamera = GameObject.Find("Camera").GetComponent<ConnectToPhoton>();
     }
-
+    ConnectToPhoton comp;
+    UILabel buttonName;
+    bool init = false;
+    void Init()
+    {
+        comp = GameObject.Find("Camera").GetComponent<ConnectToPhoton>();
+        buttonName = GameObject.Find("ReadyPlayButton").transform.FindChild("Label").GetComponent<UILabel>();
+        init = false;
+    }
+    void Update()
+    {
+      
+        
+    }
 
     public void JoinRoom(string name)
     {
