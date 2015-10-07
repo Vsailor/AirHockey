@@ -9,6 +9,7 @@ public class CameraScript : MonoBehaviour {
     public bool invertHorizontal = true, invertVertical=false;
     private float xRotated ,yRotated;
     public float top, bot, left, right;
+    private bool rightclicked = false;
     // Use this for initialization
     void Start () {
 	
@@ -18,7 +19,14 @@ public class CameraScript : MonoBehaviour {
 	void Update () {
         var x = CnInputManager.GetAxis("Horizontal");
         var y = CnInputManager.GetAxis("Vertical");
-        var xAngle = x * speedX * Time.deltaTime;
+
+        rightclicked = Input.GetMouseButton(1);
+        if(rightclicked)
+        {
+	        x = Input.GetAxis("Mouse X");
+	        y = Input.GetAxis("Mouse Y");
+	    }
+	    var xAngle = x * speedX * Time.deltaTime;
         var yAngle = y * speedY * Time.deltaTime;
 	    if (invertHorizontal) xAngle *= -1;
 	    if (invertVertical) yAngle *= -1;
@@ -33,4 +41,5 @@ public class CameraScript : MonoBehaviour {
 	        yRotated += yAngle;
 	    }
 	}
+
 }
