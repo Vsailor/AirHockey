@@ -78,13 +78,16 @@ public class LobbySceneScript : Photon.MonoBehaviour
         {
             Init();
         }
-        if (Time.fixedTime % 2 == 0)
+        if (init)
         {
-            ShowPlayers();
-        }
-        if (Input.GetKeyDown(KeyCode.Return) && inputField.text != "" && !inputField.text.Contains("|"))
-        {
-            GameObject.Find("Camera").GetComponent<ConnectToPhoton>().SendMessageInLobby();
+            if (Time.fixedTime % 2 == 0)
+            {
+                ShowPlayers();
+            }
+            if (Input.GetKeyDown(KeyCode.Return) && inputField.text != "" && !inputField.text.Contains("|"))
+            {
+                GameObject.Find("Camera").GetComponent<ConnectToPhoton>().SendMessageInLobby();
+            }
         }
     }
 

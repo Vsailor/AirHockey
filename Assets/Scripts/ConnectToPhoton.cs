@@ -76,6 +76,7 @@ public class ConnectToPhoton : Photon.MonoBehaviour
     [PunRPC]
     void Chat(string NewMessage)
     {
+        if (NewMessage!=null)
         ChatText.text = NewMessage;
     }
     UISprite Ready1;
@@ -83,6 +84,7 @@ public class ConnectToPhoton : Photon.MonoBehaviour
     [PunRPC]
     void ReadyLight(bool player1, bool player2)
     {
+        
         Ready1 = GameObject.Find("Ready1").GetComponent<UISprite>();
         Ready2 = GameObject.Find("Ready2").GetComponent<UISprite>();
         Player1 = player1;
