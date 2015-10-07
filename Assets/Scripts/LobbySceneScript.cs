@@ -13,9 +13,11 @@ public class LobbySceneScript : Photon.MonoBehaviour
         player2 = GameObject.Find("Player2");
     }
     GameObject sendButton;
+    ConnectToPhoton PhotonCamera;
     UILabel inputField;
     private GameObject player1;
     private GameObject player2;
+    private UILabel Timer;
     private void Init()
     {
         if (PhotonNetwork.room != null)
@@ -24,8 +26,10 @@ public class LobbySceneScript : Photon.MonoBehaviour
             GameObject.Find("RoomName").GetComponent<UILabel>().text = "Room \"" + PhotonNetwork.room.name + "\"";
             
         }
+        PhotonCamera = GameObject.Find("Camera").GetComponent<ConnectToPhoton>();
         inputField = GameObject.Find("InputField").transform.FindChild("Label").GetComponent<UILabel>();
         sendButton = GameObject.Find("SendButton");
+        Timer = GameObject.Find("Timer").GetComponent<UILabel>();
     }
 
 
@@ -71,7 +75,9 @@ public class LobbySceneScript : Photon.MonoBehaviour
 
         }
     }
-
+    int startTime;
+    int secondsLeft = 5;
+    int oldTime = 0;
     private void Update()
     {
         if (!init)
@@ -80,9 +86,38 @@ public class LobbySceneScript : Photon.MonoBehaviour
         }
         if (init)
         {
+            if (Timer.text.Length != 0)
+            {
+                if (oldTime != (int)(Time.fixedTime))
+                {
+                    secondsLeft -= 1;
+                    Timer.text = secondsLeft.ToString();
+                    if (secondsLeft == 0)
+                    {
+                        Application.LoadLevel("GameScene");
+                    }
+                    oldTime = (int)(Time.fixedTime);
+                }
+                
+            }
+            if (!(PhotonCamera.Player1 && PhotonCamera.Player2))
+            {
+                secondsLeft = 5;
+                Timer.text = "";
+                oldTime = 0;
+
+
+            }
             if (Time.fixedTime % 2 == 0)
             {
                 ShowPlayers();
+                if (PhotonCamera.Player1 && PhotonCamera.Player2 && Timer.text.Length==0)
+                {
+                    oldTime = (int)(Time.fixedTime);
+                    startTime = (int)(Time.fixedTime);
+                    Timer.text = secondsLeft.ToString();
+
+                }
             }
             if (Input.GetKeyDown(KeyCode.Return))
             {
