@@ -28,9 +28,17 @@ public class ButtonScript : MonoBehaviour
         }
         else if (name == "CreateRoomButton")
         {
-            PhotonCamera.CreateRoom((GameObject.Find("RoomNameField").transform.FindChild("Label").GetComponent<UILabel>().text));
-            PhotonCamera.PlayerName = GameObject.Find("YourNameField").transform.FindChild("Label").GetComponent<UILabel>().text;
-            Application.LoadLevel("LobbyScene");
+            var input1 = GameObject.Find("YourNameField").transform.FindChild("Label").GetComponent<UILabel>();
+            var input2 = GameObject.Find("RoomNameField").transform.FindChild("Label").GetComponent<UILabel>();
+            if (input1.text != "" && input1.text.Length <= 15 && input2.text != "" && input2.text.Length <=15)
+            {
+                PhotonCamera.PlayerName = input1.text;
+                PhotonCamera.CreateRoom(input2.text);
+               
+                Application.LoadLevel("LobbyScene");
+            }
+     
+            
         }
         else if (name == "SendButton")
         {
@@ -50,8 +58,13 @@ public class ButtonScript : MonoBehaviour
         }
         else if (name == "ConfirmNameButton")
         {
-            PhotonCamera.PlayerName = GameObject.Find("InputField").transform.FindChild("Label").GetComponent<UILabel>().text;
-            Application.LoadLevel("JoinGameScene");
+            var input = GameObject.Find("InputField").transform.FindChild("Label").GetComponent<UILabel>();
+            if (input.text != "" && input.text.Length <= 15)
+            {
+                PhotonCamera.PlayerName = input.text;
+                Application.LoadLevel("JoinGameScene");
+            }
+            
         }
         else if (name == "BackToNameScene")
         {

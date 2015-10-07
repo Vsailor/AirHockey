@@ -12,7 +12,7 @@ public class AutocompleteScript : MonoBehaviour {
     {
         if (!(PhotonNetwork.playerName == "Default" || PhotonNetwork.playerName == ""))
         {
-            GetComponent<InputField>().text = PhotonNetwork.playerName;
+            GetComponent<UILabel>().text = PhotonNetwork.playerName;
         }
         init = true;
     }

@@ -84,7 +84,7 @@ public class LobbySceneScript : Photon.MonoBehaviour
             {
                 ShowPlayers();
             }
-            if (Input.GetKeyDown(KeyCode.Return) && inputField.text != "" && !inputField.text.Contains("|"))
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 GameObject.Find("Camera").GetComponent<ConnectToPhoton>().SendMessageInLobby();
             }

@@ -125,7 +125,7 @@ public class ConnectToPhoton : Photon.MonoBehaviour
     {
         if (ChatText.text.Contains("|"))
         {
-            return;
+            ChatText.text = ChatText.text.Remove(ChatText.text.IndexOf('|'));
         }
         if (ChatText.text != "")
         {
