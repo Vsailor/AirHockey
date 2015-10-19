@@ -22,26 +22,156 @@ Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Mana
 Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.084 seconds
+- Completed reload, in  0.177 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
+Initialize engine version: 5.1.2f1 (afd2369b692a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 710M      (ID=0x1140)
+    Vendor:   NVIDIA
+    VRAM:     1996 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.246 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
 Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 25fc -> priority: 1 
+  Thread -> id: 2654 -> priority: 1 
+<RI> Initialized touch support.
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\ivanv\Documents\GitHub\AirHockey\AirHockey_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 25c8 -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.835207 ms
+UnloadTime: 8.098961 ms
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 510.
-Total: 0.471679 ms (FindLiveObjects: 0.034638 ms CreateObjectMapping: 0.024802 ms MarkObjects: 0.399836 ms  DeleteObjects: 0.011118 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 511.
+Total: 1.469778 ms (FindLiveObjects: 0.157796 ms CreateObjectMapping: 0.079112 ms MarkObjects: 1.189677 ms  DeleteObjects: 0.038914 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.693193 ms
+UnloadTime: 1.435995 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 543.
-Total: 1.184116 ms (FindLiveObjects: 0.161217 ms CreateObjectMapping: 0.063717 ms MarkObjects: 0.927536 ms  DeleteObjects: 0.026085 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 547.
+Total: 1.362869 ms (FindLiveObjects: 0.079539 ms CreateObjectMapping: 0.067993 ms MarkObjects: 1.191388 ms  DeleteObjects: 0.022236 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.973000 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 503.
+Total: 1.296158 ms (FindLiveObjects: 0.073980 ms CreateObjectMapping: 0.073125 ms MarkObjects: 1.119118 ms  DeleteObjects: 0.027368 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.316921 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 547.
+Total: 1.375271 ms (FindLiveObjects: 0.079112 ms CreateObjectMapping: 0.072270 ms MarkObjects: 1.193099 ms  DeleteObjects: 0.029079 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+The observed monobehaviour (Camera) of this PhotonView does not implement OnPhotonSerializeView()!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+The observed monobehaviour (Camera) of this PhotonView does not implement OnPhotonSerializeView()!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+UnloadTime: 1.380402 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 551.
+Total: 1.292310 ms (FindLiveObjects: 0.085526 ms CreateObjectMapping: 0.072697 ms MarkObjects: 1.106716 ms  DeleteObjects: 0.025230 ms)
+
+5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.275293 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 504.
+Total: 1.677180 ms (FindLiveObjects: 0.124441 ms CreateObjectMapping: 0.092796 ms MarkObjects: 1.433001 ms  DeleteObjects: 0.025658 ms)
+
+Connect() to 'ns.exitgames.com' failed: System.Net.Sockets.SocketException: Этот хост неизвестен.
+
+  at System.Net.Dns.GetHostByName (System.String hostName) [0x00000] in <filename unknown>:0 
+  at System.Net.Dns.GetHostEntry (System.String hostNameOrAddress) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.IPhotonSocket.GetIpAddress (System.String serverIp) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.SocketUdp.DnsAndConnect () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.080203 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 508.
+Total: 1.014347 ms (FindLiveObjects: 0.097500 ms CreateObjectMapping: 0.082105 ms MarkObjects: 0.803952 ms  DeleteObjects: 0.029079 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.202079 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 511.
+Total: 0.842011 ms (FindLiveObjects: 0.062862 ms CreateObjectMapping: 0.055592 ms MarkObjects: 0.703030 ms  DeleteObjects: 0.019243 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.890334 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 507.
+Total: 1.010071 ms (FindLiveObjects: 0.162500 ms CreateObjectMapping: 0.197994 ms MarkObjects: 0.631615 ms  DeleteObjects: 0.016250 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.175138 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 517.
+Total: 1.203789 ms (FindLiveObjects: 0.079539 ms CreateObjectMapping: 0.072697 ms MarkObjects: 1.029742 ms  DeleteObjects: 0.019243 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.809511 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 547.
+Total: 0.902307 ms (FindLiveObjects: 0.059013 ms CreateObjectMapping: 0.046184 ms MarkObjects: 0.777011 ms  DeleteObjects: 0.018815 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.821485 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 513.
+Total: 1.016058 ms (FindLiveObjects: 0.057302 ms CreateObjectMapping: 0.047039 ms MarkObjects: 0.888623 ms  DeleteObjects: 0.022236 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.788129 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 553.
+Total: 0.949775 ms (FindLiveObjects: 0.051743 ms CreateObjectMapping: 0.065428 ms MarkObjects: 0.806090 ms  DeleteObjects: 0.025230 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.752208 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 551.
+Total: 0.953196 ms (FindLiveObjects: 0.055164 ms CreateObjectMapping: 0.047895 ms MarkObjects: 0.827899 ms  DeleteObjects: 0.021381 ms)
 
 The observed monobehaviour (Camera) of this PhotonView does not implement OnPhotonSerializeView()!
  
@@ -50,4 +180,15 @@ The observed monobehaviour (Camera) of this PhotonView does not implement OnPhot
 The observed monobehaviour (Camera) of this PhotonView does not implement OnPhotonSerializeView()!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.086618 ms
+Unloading2U lonuding 6e unusad iAes felts (Serias to reiles  ow loadem: e)
+ory usage. Loaded Objects now: 716.
+Total: 1.167440 ms (FindLiveObjects: 0.094079 ms CreateObjectMapping: 0.116744 ms MarkObjects: 0.923261 ms  DeleteObjects: 0.031644 ms)
+
+UnloadTime: 0.942505 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 712.
+Total: 0.994249 ms (FindLiveObjects: 0.089375 ms CreateObjectMapping: 0.084243 ms MarkObjects: 0.778293 ms  DeleteObjects: 0.039342 ms)
 

@@ -30,15 +30,15 @@ public class ButtonScript : MonoBehaviour
         {
             var input1 = GameObject.Find("YourNameField").transform.FindChild("Label").GetComponent<UILabel>();
             var input2 = GameObject.Find("RoomNameField").transform.FindChild("Label").GetComponent<UILabel>();
-            if (input1.text != "" && input1.text.Length <= 15 && input2.text != "" && input2.text.Length <=15)
+            if (input1.text != "" && input1.text.Length <= 15 && input2.text != "" && input2.text.Length <= 15)
             {
                 PhotonCamera.PlayerName = input1.text;
                 PhotonCamera.CreateRoom(input2.text);
-               
+
                 Application.LoadLevel("LobbyScene");
             }
-     
-            
+
+
         }
         else if (name == "SendButton")
         {
@@ -64,17 +64,21 @@ public class ButtonScript : MonoBehaviour
                 PhotonCamera.PlayerName = input.text;
                 Application.LoadLevel("JoinGameScene");
             }
-            
+
         }
         else if (name == "BackToNameScene")
         {
             Application.LoadLevel("EnterNameScene");
         }
-        else if (name.Contains("JoinButton"))
+        //else if (name.Contains("JoinButton"))
+        //{
+        //    var comp = GetComponent<JoinButtonScript>();
+        //    JoinRoom(comp.LoadLevelName);
+        //    Application.LoadLevel("LobbyScene");
+        //}
+        else if (name == "TryConnectAgainButton")
         {
-            var comp = GetComponent<JoinButtonScript>();
-            JoinRoom(comp.LoadLevelName);
-            Application.LoadLevel("LobbyScene");
+            PhotonCamera.Connect();
         }
     }
     public void LoadScene(string sceneName)
