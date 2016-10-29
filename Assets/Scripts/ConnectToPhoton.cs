@@ -131,8 +131,12 @@ public class ConnectToPhoton : Photon.MonoBehaviour
     public void SendMessageInLobby()
     {
         string inputFieldText = inputField.transform.FindChild("Label").GetComponent<UILabel>().text;
-
         if (string.IsNullOrEmpty(inputFieldText))
+        {
+            return;
+        }
+
+        if (inputFieldText.Length <= 1)
         {
             return;
         }
