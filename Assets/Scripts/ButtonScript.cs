@@ -37,13 +37,10 @@ public class ButtonScript : MonoBehaviour
 
                 Application.LoadLevel("LobbyScene");
             }
-
-
         }
         else if (name == "SendButton")
         {
             GameObject.Find("Camera").GetComponent<ConnectToPhoton>().SendMessageInLobby();
-
         }
         else if (name == "ReadyPlayButton")
         {

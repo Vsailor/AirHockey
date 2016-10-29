@@ -130,6 +130,13 @@ public class ConnectToPhoton : Photon.MonoBehaviour
     }
     public void SendMessageInLobby()
     {
+        string inputFieldText = inputField.transform.FindChild("Label").GetComponent<UILabel>().text;
+
+        if (string.IsNullOrEmpty(inputFieldText))
+        {
+            return;
+        }
+
         if (ChatText.text.Contains("|"))
         {
             ChatText.text = ChatText.text.Remove(ChatText.text.IndexOf('|'));
@@ -142,7 +149,7 @@ public class ConnectToPhoton : Photon.MonoBehaviour
         {
             ChatText.text = ChatText.text.Remove(0, ChatText.text.IndexOf('\n') + 1);
         }
-        string toAdd = PhotonNetwork.playerName + ": " + inputField.transform.FindChild("Label").GetComponent<UILabel>().text;
+        string toAdd = PhotonNetwork.playerName + ": " + inputFieldText;
         if (toAdd.Length >= maxChatInputString)
         {
             toAdd = toAdd.Remove(maxChatInputString);
