@@ -7,7 +7,8 @@ public class BallScript : MonoBehaviour {
     void Start()
     {
         audio = GetComponents<AudioSource>();
-        ResetObjects();
+        var iterator=ResetObjects();
+        while (iterator.MoveNext()) { }
     }
 
     IEnumerator ResetObjects()
@@ -15,10 +16,12 @@ public class BallScript : MonoBehaviour {
         GetComponent<Rigidbody>().MovePosition(new Vector3(4.4f, 2.3f, 8f));
         GetComponent<Rigidbody>().Sleep();
         GetComponent<Rigidbody>().WakeUp();
-        GameObject.Find("Stick").GetComponent<Rigidbody>().MovePosition(new Vector3(-27.2f, 4.2f, 8.7f));
-        GameObject.Find("Stick2").GetComponent<Rigidbody>().MovePosition(new Vector3(35.6f, 4.2f, 8.7f));
         GameObject.Find("Stick").GetComponent<StickPhysics>().blocked = true;
         GameObject.Find("Stick2").GetComponent<StickPhysics>().blocked = true;
+        var position = GameObject.Find("Stick").transform.position;
+        GameObject.Find("Stick").transform.Translate(-27.2f- position.x, 0, 8.7f- position.z);
+        position = GameObject.Find("Stick2").transform.position;
+        GameObject.Find("Stick2").transform.Translate(35.6f - position.x, 0, 8.6f - position.z);
         yield return new WaitForSeconds(1);
         GameObject.Find("Stick").GetComponent<StickPhysics>().blocked = false;
         GameObject.Find("Stick2").GetComponent<StickPhysics>().blocked = false;
