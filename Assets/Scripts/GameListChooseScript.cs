@@ -1,51 +1,47 @@
 ﻿using UnityEngine;
-using System.Collections;
+using Assets.Scripts.Components;
 
-public class GameListChooseScript : Photon.MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-    bool init = false;
+public class GameListChooseScript : Photon.MonoBehaviour
+{
+    private bool init;
     void Init()
     {
-        list = GetComponent<UIPopupList>();
+        lobbysList = GetComponent<UIPopupList>();
     }
-    UIPopupList list;
-    bool join = false;
-	// Update is called once per frame
+
+    private UIPopupList lobbysList;
+    private bool join;
 	void Update () {
         if (!init)
         {
             Init();
             init = true;
         }
-        if (list.selection != "<Not choosen>" && !join)
+
+        if (lobbysList.selection != Controls.ListSelectionDefault && !join)
         {
             foreach (var item in PhotonNetwork.GetRoomList())
             {
-                if (item.name == list.selection)
+                if (item.name == lobbysList.selection)
                 {
                     PhotonNetwork.JoinRoom(item.name);
                     join = true;
                 }
             }
         }
+
         if (PhotonNetwork.room != null)
         {
-
-            if (PhotonNetwork.room.playerCount >2)
+            if (PhotonNetwork.room.playerCount > 2)
             {
                 PhotonNetwork.LeaveRoom();
 
-                list.selection = "<Not choosen>";
+                lobbysList.selection = Controls.ListSelectionDefault;
                 join = false;
             }
             else
             {
-
-                Application.LoadLevel("LobbyScene");
+                Application.LoadLevel(Scenes.LobbyScene);
             }
         }
 	}

@@ -1,12 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
-public class AutocompleteScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+public class AutocompleteScript : MonoBehaviour
+{
     bool init = false;
     void Init()
     {
@@ -16,7 +11,7 @@ public class AutocompleteScript : MonoBehaviour {
         }
         init = true;
     }
-	// Update is called once per frame
+
 	void Update () {
         if (!init)
         {

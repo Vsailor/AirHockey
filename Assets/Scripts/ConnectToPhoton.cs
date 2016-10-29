@@ -1,23 +1,22 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
-using System;
+using Assets.Scripts.Components;
 
 public class ConnectToPhoton : Photon.MonoBehaviour
 {
     public static int ConnectAttemptCount = 0;
-    const int MAX_CHAT_STRINGS_COUNT = 6;
-    const int MAX_CHAT_STRING_LENGTH = 40;
+    private const int MAX_CHAT_STRINGS_COUNT = 6;
+    private const int MAX_CHAT_STRING_LENGTH = 40;
     public UILabel ChatText;
-    GameObject inputField;
-    int maxChatInputString;
+    private GameObject inputField;
+    private int maxChatInputString;
+
     // Use this for initialization
     void Start()
     {
-        if (Application.loadedLevelName == "LobbyScene")
+        if (Application.loadedLevelName == Scenes.LobbyScene)
         {
-            ChatText = GameObject.Find("Chat").GetComponent<UILabel>();
-            inputField = GameObject.Find("InputField");
+            ChatText = GameObject.Find(Controls.Chat).GetComponent<UILabel>();
+            inputField = GameObject.Find(Controls.InputField);
             maxChatInputString = MAX_CHAT_STRING_LENGTH - (PlayerName + ": ").Length;
         }
         if (!PhotonNetwork.connectedAndReady)
@@ -25,19 +24,19 @@ public class ConnectToPhoton : Photon.MonoBehaviour
             Connect();
         }
     }
+
     public void Debug()
     {
         print(PhotonNetwork.room);
     }
+
     public void Connect()
     {
-        
         PhotonNetwork.autoJoinLobby = true;
         PhotonNetwork.ConnectUsingSettings("0.1");
         PhotonNetwork.playerName = "Default";
-
-
     }
+
     public string PlayerName
     {
         get
@@ -61,10 +60,9 @@ public class ConnectToPhoton : Photon.MonoBehaviour
                 }
                 return PhotonNetwork.playerList[0].name;
             }
-            return "";
+            return string.Empty;
         }
     }
-
 
     private int getStringsCount(string s)
     {
@@ -76,50 +74,54 @@ public class ConnectToPhoton : Photon.MonoBehaviour
                 count++;
             }
         }
+
         return count;
     }
+
     public bool Player1 = false;
     public bool Player2 = false;
+
     [PunRPC]
     void Chat(string NewMessage)
     {
         if (NewMessage != null)
             ChatText.text = NewMessage;
     }
+
     UISprite Ready1;
     UISprite Ready2;
     [PunRPC]
-    void ReadyLight(bool player1, bool player2)
+    void ReadyLight(bool player1IsReady, bool player2IsReady)
     {
+        Ready1 = GameObject.Find(Controls.Ready1).GetComponent<UISprite>();
+        Ready2 = GameObject.Find(Controls.Ready2).GetComponent<UISprite>();
 
-        Ready1 = GameObject.Find("Ready1").GetComponent<UISprite>();
-        Ready2 = GameObject.Find("Ready2").GetComponent<UISprite>();
-        Player1 = player1;
-        Player2 = player2;
+        Player1 = player1IsReady;
+        Player2 = player2IsReady;
+
         if (Player1)
         {
-            Ready1.spriteName = "Green";
+            Ready1.spriteName = Controls.Green;
         }
         else if (!Player1)
         {
-            Ready1.spriteName = "Red";
+            Ready1.spriteName = Controls.Red;
         }
 
         if (Player2)
         {
-            Ready2.spriteName = "Green";
+            Ready2.spriteName = Controls.Green;
         }
         else if (!Player2)
         {
-            Ready2.spriteName = "Red";
+            Ready2.spriteName = Controls.Red;
         }
-
     }
 
     public void ReadyClick(bool player1, bool player2)
     {
         PhotonView photonView = PhotonView.Find(2);
-        photonView.RPC("ReadyLight", PhotonTargets.All, player1, player2);
+        photonView.RPC(Controls.ReadyLight, PhotonTargets.All, player1, player2);
     }
     public bool PlayerIsMasterClient
     {
@@ -145,14 +147,17 @@ public class ConnectToPhoton : Photon.MonoBehaviour
         {
             ChatText.text = ChatText.text.Remove(ChatText.text.IndexOf('|'));
         }
-        if (ChatText.text != "")
+
+        if (!string.IsNullOrEmpty(ChatText.text))
         {
             ChatText.text += '\n';
         }
+
         if (getStringsCount(ChatText.text) >= MAX_CHAT_STRINGS_COUNT)
         {
             ChatText.text = ChatText.text.Remove(0, ChatText.text.IndexOf('\n') + 1);
         }
+
         string toAdd = PhotonNetwork.playerName + ": " + inputFieldText;
         if (toAdd.Length >= maxChatInputString)
         {
@@ -163,12 +168,13 @@ public class ConnectToPhoton : Photon.MonoBehaviour
         {
             toAdd = toAdd.Remove(toAdd.IndexOf('\n'), 1);
         }
+
         ChatText.text += toAdd;
 
-        inputField.transform.FindChild("Label").GetComponent<UILabel>().text = "";
-        PhotonView photonView = PhotonView.Find(1);
-        photonView.RPC("Chat", PhotonTargets.All, ChatText.text);
+        inputField.transform.FindChild("Label").GetComponent<UILabel>().text = string.Empty;
 
+        PhotonView photonView = PhotonView.Find(1);
+        photonView.RPC(Controls.Chat, PhotonTargets.All, ChatText.text);
     }
 
     public void ExitRoom()
@@ -180,22 +186,22 @@ public class ConnectToPhoton : Photon.MonoBehaviour
     {
         PhotonNetwork.JoinOrCreateRoom(roomName, new RoomOptions(), TypedLobby.Default);
     }
+
     // Update is called once per frame
-    public static string LastScene = "MainMenuScene";
+    public static string LastScene = Scenes.MainMenuScene;
     void Update()
     {
         if (PhotonNetwork.connectionState == ConnectionState.Disconnected)
         {
-            if (Application.loadedLevelName != "FailedToConnectScene")
+            if (Application.loadedLevelName != Scenes.FailedToConnectScene)
             {
                 ConnectToPhoton.ConnectAttemptCount++;
-                if (ConnectToPhoton.ConnectAttemptCount >= 5 && Application.loadedLevelName != "FailedToConnectScene")
+                if (ConnectToPhoton.ConnectAttemptCount >= 5 && Application.loadedLevelName != Scenes.FailedToConnectScene)
                 {
                     print(ConnectToPhoton.ConnectAttemptCount);
                     ConnectToPhoton.LastScene = Application.loadedLevelName;
-                    Application.LoadLevel("FailedToConnectScene");
+                    Application.LoadLevel(Scenes.FailedToConnectScene);
                 }
-
             }
         }
         else
@@ -203,24 +209,16 @@ public class ConnectToPhoton : Photon.MonoBehaviour
             ConnectToPhoton.ConnectAttemptCount = 0;
         }
 
-        if (PhotonNetwork.connectedAndReady && Application.loadedLevelName == "FailedToConnectScene")
+        if (PhotonNetwork.connectedAndReady && Application.loadedLevelName == Scenes.FailedToConnectScene)
         {
-            if (ConnectToPhoton.LastScene == "LobbyScene")
+            if (ConnectToPhoton.LastScene == Scenes.LobbyScene)
             {
-                Application.LoadLevel("MainMenuScene");
+                Application.LoadLevel(Scenes.MainMenuScene);
             }
             else
             {
                 Application.LoadLevel(ConnectToPhoton.LastScene);
             }
         }
-
-        //if (PhotonNetwork.connectionState == ConnectionState.Disconnected)
-        //{
-        //    MessageBox.SetActive(true);
-        //    MessageBox.transform.FindChild("Button").GetComponent<Button>().GetComponentInChildren<Text>().text = "Try again";
-        //    MessageBox.transform.FindChild("MessageBoxText").GetComponent<Text>().text = "Failed to connect.\n Check your internet connection";
-
-        //}
     }
 }
