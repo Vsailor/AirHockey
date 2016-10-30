@@ -78,8 +78,8 @@ public class ConnectToPhoton : Photon.MonoBehaviour
         return count;
     }
 
-    public bool Player1 = false;
-    public bool Player2 = false;
+    public bool Player1;
+    public bool Player2;
 
     [PunRPC]
     void Chat(string NewMessage)

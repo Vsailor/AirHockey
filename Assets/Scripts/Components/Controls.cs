@@ -30,9 +30,18 @@
         public const string Red = "Red";
         public const string Green = "Green";
 
+        // GameScene
+        public const string Stick1 = "Stick(Clone)";
+        public const string Stick2 = "Stick2(Clone)";
+        public const string Ball = "Ball(Clone)";
+        public const string Connecter = "Connecter";
+
         // Other
         public const string BackToMainMenuButton = "BackToMainMenuButton";
         public const string TryConnectAgainButton = "TryConnectAgainButton";
         public const string InputField = "InputField";
+
+        //IDs
+        public const int ConnecterID = 123;
     }
 }

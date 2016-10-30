@@ -1,9 +1,7 @@
 ﻿using System;
 using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
 
-public class StickPhysics : MonoBehaviour
+public class StickPhysics : Photon.MonoBehaviour
 {
     public Camera camera;
     public Transform trans;
@@ -16,9 +14,37 @@ public class StickPhysics : MonoBehaviour
     public float cornerRightZ = 23.49f;
     public bool blocked;
     Vector3 old = new Vector3();
+
+    private bool init;
+
+    private void Init()
+    {
+        GameObject cam = GameObject.Find("Main Camera");
+        if (cam == null)
+            return;
+
+        camera = cam.GetComponent<Camera>();
+        init = true;
+    }
+
+    private void Update()
+    {
+        if (!init)
+            Init();
+
+        ConnecterScript.SendAcceleration(new Vector3(DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second));
+    }
+
     void OnMouseDrag()
     {
-        if (blocked) return;
+        if (!photonView.isMine)
+            return;
+
+        if (blocked)
+        {
+            return;
+        }
+
         float distance_to_screen = camera.WorldToScreenPoint(gameObject.transform.position).z;
         Vector3 pos_move = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen));
         // rb.MovePosition(new Vector3(Mathf.Clamp(pos_move.x, bot, top), rb.position.y, Mathf.Clamp(pos_move.z,left,right)));
@@ -49,7 +75,6 @@ public class StickPhysics : MonoBehaviour
             }
         }
         //  print(GetComponent<Rigidbody>().velocity);
-
     }
 
     void OnTriggerEnter(Collider collision)
